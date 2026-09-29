@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andreamss Pastelería</title>
+  <link rel="stylesheet" href="styles.css">
+    <!-- Tipografías Oficiales Poppins / Lovelace (fallback Serif elegante) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO / NAVBAR -->
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo-container">
+                <!-- EDITAR: Guarda la imagen del logo en tu carpeta como "logo.png" -->
+                <img src="LOGO Andreams 2 SIN FONDO.png " alt="Andreams Pastelería Logo" class="logo-img" id="logoimg">
+            </div>
+
+<!-- Botón Hamburguesa para Móviles -->
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="#inicio" class="nav-link active" onclick="mostrarSeccion('inicio')">Inicio</a>
+            <a href="#tienda" class="nav-link" onclick="mostrarSeccion('tienda')">Tienda</a>
+            <a href="#contacto" class="nav-link" onclick="mostrarSeccion('contacto')">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- BANNER DE AVISO -->
+    <div class="notice-bar">
+        <span>✨ Somos tienda en línea | Trabajamos bajo pedidos (Mínimo 2 días de anticipación) ✨</span>
+    </div>
+
+    <!-- SECCIÓN: INICIO -->
+    <main id="seccion-inicio" class="seccion-contenido active-section">
+        <!-- HERO BANNER -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Pastelería Andreams</h1>
+                <p>Endulzamos tus sueños.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="mostrarSeccion('tienda')">Ver Catálogo</button>
+                    <a href="https://wa.me/584246370088" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Hacer Pedido</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE HISTORIA -->
+        <section class="historia-container">
+            <div class="historia-card">
+                <div class="historia-img-box">
+                    <!-- EDITAR: Guarda la imagen de la fundadora/mujer como "fundadora.jpg" -->
+                    <img src="fundadora.jpg" alt="Fundadora Andreams Pastelería" class="fundadora-img">
+                </div>
+                <div class="historia-texto">
+                    <h2>Nuestra Historia</h2>
+                    <p>
+                        Andreams Pastelería nació de un sueño que guardo en el corazón desde niña: tener mi propia pastelería para crear momentos dulces y llevar felicidad a las personas.
+                    </p>
+                    <p>
+                        Un día tomé la decisión de empezar, y desde entonces cada día ha sido una hermosa aventura. El nombre combina mi nombre, Andrea, con la palabra <i>dreams</i> (sueños), porque este proyecto es la prueba de que los sueños, cuando se hornean con pasión, se hacen realidad. ✨🍰
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- SECCIÓN: TIENDA / CATÁLOGO -->
+    <section id="seccion-tienda" class="seccion-contenido container">
+        <h2 class="titulo-seccion">Catálogo Oficial</h2>
+        <p class="subtitulo-seccion">Tortas y Postres preparados especialmente para ti</p>
+
+        <!-- CATEGORÍAS Y PRODUCTOS -->
+        <div class="catalogo-grid" id="catalogoGrid">
+
+            <!-- PRODUCTO 1 -->
+            <div class="card-producto" data-categoria="Torta" data-nombre="Torta estilo Wavy Cake y Frutos Rojos">
+                <!-- EDITAR: Guarda la foto 1 como "torta1.jpg" -->
+                <img src="torta-1.jpg" alt="Torta" class="producto-img">
+                <div class="card-body">
+                    <span class="badge">Tortas</span>
+                    <h3>Torta estilo Wavy Cake y Frutos Rojos</h3>
+                    <p>Elegante torta decorada con merengue italiano, fresas frescas cortadas y cerezas.</p>
+                    <a href="https://wa.me/584246370088?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20la%20Torta%20Estilo%20Wavy%20Cake%20y%20Frutos%20Rojos" target="_blank" class="btn-card"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 2 -->
+            <div class="card-producto" data-categoria="torta" data-nombre="Torta estilo Wavy Cake y Flores Naturales">
+                <!-- EDITAR: Guarda la foto 2 como "torta2.jpg" -->
+                <img src="torta-2.jpg" alt="Tortas" class="producto-img">
+                <div class="card-body">
+                    <span class="badge">Tortas</span>
+                    <h3>Torta estilo Wavy Cake y Flores Naturales</h3>
+                    <p>Esponjoso pastel de vainilla decorado con un merengue italiano sabor a nata y una variedad de flores naturales.</p>
+                    <a href="https://wa.me/584246370088?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20la%20Torta%20Wavy%20Cake%20y%20Flores%20Naturales" target="_blank" class="btn-card"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 3 -->
+            <div class="card-producto" data-categoria="torta" data-nombre="Torta Estilo Wavy Cake">
+                <!-- EDITAR: Guarda la foto 3 como "torta3.jpg" -->
+                <img src="torta-3.jpg" alt="Tortas" class="producto-img">
+                <div class="card-body">
+                    <span class="badge">Tortas</span>
+                    <h3>Torta Estilo Wavy Cake</h3>
+                    <p>Delicado hermoso y colorido pastel de vainilla decorado con un suave merengue italiano.</p>
+                    <a href="https://wa.me/584246370088?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20la%20Torta%20Wavy%20Cake" target="_blank" class="btn-card"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 4 -->
+            <div class="card-producto" data-categoria="torta" data-nombre="Torta de Baby Shark">
+                <!-- EDITAR: Guarda la foto 4 como "torta4.jpg" -->
+                <img src="torta-4.jpg" alt="Tortas" class="producto-img">
+                <div class="card-body">
+                    <span class="badge">Tortas</span>
+                    <h3>Torta de Baby Shark</h3>
+                    <p>Un detalle ideal para que tu pequeño principe sea feliz.</p>
+                    <a href="https://wa.me/584246370088?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20la%20Torta%20de%20Baby%20Shark" target="_blank" class="btn-card"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 5 -->
+            <div class="card-producto" data-categoria="torta" data-nombre="Torta de superheroes">
+                <!-- EDITAR: Guarda la foto 5 como "postre1.jpg" -->
+                <img src="torta-5.jpg" alt="Tortas" class="producto-img">
+                <div class="card-body">
+                    <span class="badge">Tortas</span>
+                    <h3>Torta de superheroes</h3>
+                    <p>Un hermoso pastel con tematica de los Avengers.</p>
+                    <a href="https://wa.me/584246370088?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20Torta%20de%20Superheroes" target="_blank" class="btn-card"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- PRODUCTO 6 -->
+            <div class="card-producto" data-categoria="torta" data-nombre="Torta de Cars">
+                <!-- EDITAR: Guarda la foto 6 como "torta6.jpg" -->
+                <img src="torta-6.jpg" alt="Torta" class="producto-img">
+                <div class="card-body">
+                    <span class="badge">Tortas</span>
+                    <h3>Torta de Cars</h3>
+                    <p>Pastel ùnico con textura en bordes y topper personalizado.</p>
+                    <a href="https://wa.me/584246370088?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20Torta%20de%20Cars" target="_blank" class="btn-card"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>
+                </div>
+            </div>
+
+
+            <!-- EDITAR PRODUCTO 7 -->
+            <div class="card-producto" data-categoria="torta" data-nombre="Tortas Estilo Casa de Jengibre">
+                <!-- EDITAR: Reemplaza "imagen7.jpg" por la ruta de tu nueva imagen -->
+                <img src="torta-7.jpg" alt="Tortas" class="producto-img">
+                <div class="card-body">
+                    <span class="badge">Tortas</span>
+                    <h3>Tortas Estilo Casa de Jengibre</h3>
+                    <p>Pastel clàsico de vainilla y merengue italiano.</p>
+                    <a href="https://wa.me/584246370088?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20la%20Torta%20Estilo%20Casa%20De%20Jenjibre" target="_blank" class="btn-card"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- EDITAR PRODUCTO 8 -->
+            <div class="card-producto" data-categoria="tortas" data-nombre="Tortas de Arbolito de Navidad">
+                <!-- EDITAR: Reemplaza "imagen8.jpg" por la ruta de tu nueva imagen -->
+                <img src="torta-8.jpg" alt="Tortas" class="producto-img">
+                <div class="card-body">
+                    <span class="badge">Tortas</span>
+                    <h3>Tortas de Arbolito de Navidad</h3>
+                    <p>Un suave sabor de merengue italiano a mantecado y el esponjoso biscocho de vainilla.</p>
+                    <a href="https://wa.me/584246370088?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20la%20Torta%20De%20Arbolito%20De%20Navidad" target="_blank" class="btn-card"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card-producto" data-categoria="tortas" data-nombre="Torta de Navidad">
+                <!-- EDITAR: Reemplaza "imagen8.jpg" por la ruta de tu nueva imagen -->
+                <img src="torta-9.jpg" alt="tortas" class="producto-img">
+                <div class="card-body">
+                    <span class="badge">Tortas</span>
+                    <h3>Torta de Navidad</h3>
+                    <p>Delicioso pastel de zanahoria con frutos secos</p>
+                    <a href="https://wa.me/584246370088?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20la%20Torta%20De%20Navidad" target="_blank" class="btn-card"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card-producto" data-categoria="tortas" data-nombre="Torta de dos niveles">
+                <!-- EDITAR: Reemplaza "imagen8.jpg" por la ruta de tu nueva imagen -->
+                <img src="torta-10.jpg" alt="Tortas" class="producto-img">
+                <div class="card-body">
+                    <span class="badge">Tortas</span>
+                    <h3>Torta de dos niveles</h3>
+                    <p>Cubierto con un merengue italiano y un duyado en tendicia, el toque final hermosas flores naturales</p>
+                    <a href="https://wa.me/584246370088?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20la%20Torta%20De%20Dos%20Niveles" target="_blank" class="btn-card"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card-producto" data-categoria="tortas" data-nombre="Torta de Flores">
+                <!-- EDITAR: Reemplaza "imagen8.jpg" por la ruta de tu nueva imagen -->
+                <img src="torta-11.jpg" alt="Tortas" class="producto-img">
+                <div class="card-body">
+                    <span class="badge">Tortas</span>
+                    <h3>Torta de Flores</h3>
+                    <p>Pastel de vainilla decorada con un rico merengue italiano sabor a mantecado y flores naturales</p>
+                    <a href="https://wa.me/584246370088?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20la%20Torta%20De%20Flores" target="_blank" class="btn-card"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card-producto" data-categoria="tortas" data-nombre="Torta vintage">
+                <!-- EDITAR: Reemplaza "imagen8.jpg" por la ruta de tu nueva imagen -->
+                <img src="torta-12.jpg" alt="Tortas" class="producto-img">
+                <div class="card-body">
+                    <span class="badge">Tortas</span>
+                    <h3>Torta vintage</h3>
+                    <p>Pastel de vainilla con merengue italiano, decoraciòn de flores y detalles en un degradado azul, elegantes trazos blancos</p>
+                    <a href="https://wa.me/584246370088?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20la%20Torta%20Vintaje" target="_blank" class="btn-card"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card-producto" data-categoria="Variedad en Sabores" data-nombre="Variedad en Sabores"> 
+                <!-- EDITAR: Reemplaza "imagen8.jpg" por la ruta de tu nueva imagen -->
+                 <img src="sabor-1.jpg" alt="Sabores" class="producto-img">
+                 <div class="card-body">
+                    <span class="badge">Sabores</span>
+                    <h3> Variedad en Sabores</h3>
+                    <p></p>
+                    <a href="https://wa.me/584246370088?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20la%20Variedad%20De%20Sabores" target="_blank" class="btn-card"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>
+                 </div>
+            </div>
+
+            <div class="card-producto" data-categoria="Fresas con Crema" data-nombre="Fresas con Crema"> 
+                <!-- EDITAR: Reemplaza "imagen8.jpg" por la ruta de tu nueva imagen -->
+                 <img src="postre-1.jpg" alt="Postres" class="producto-img">
+                 <div class="card-body">
+                    <span class="badge">Postres</span>
+                    <h3>Fresas con Crema</h3>
+                    <p></p>
+                    <a href="https://wa.me/584246370088?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20las%20Fresas%20Con%20Crema" target="_blank" class="btn-card"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>
+                 </div>
+            </div>
+
+            <div class="card-producto" data-categoria="Hermosos Diseños" data-nombre="Hermosos Diseños"> 
+                <!-- EDITAR: Reemplaza "imagen8.jpg" por la ruta de tu nueva imagen -->
+                 <img src="diseño-1.jpg" alt="Diseños" class="producto-img">
+                 <div class="card-body">
+                    <span class="badge">Diseños</span>
+                    <h3>Hermosos Diseños</h3>
+                    <p></p>
+                    <a href="https://wa.me/584246370088?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20los%20diseños" target="_blank" class="btn-card"><i class="fab fa-whatsapp"></i> Pedir por WhatsApp</a>
+                 </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN: CONTACTO Y UBICACIÓN -->
+    <section id="seccion-contacto" class="seccion-contenido container">
+        <h2 class="titulo-seccion">Contáctanos</h2>
+        <div class="contacto-wrapper">
+            <div class="info-card">
+                <h3><i class="fas fa-store"></i> Información Oficial</h3>
+                <p><strong>Ubicación:</strong> Mene Grande, Estado Zulia (Tienda en Línea)</p>
+                <p><strong>Teléfono:</strong> <a href="tel:04246370088">0424-6370088</a></p>
+                <p><strong>Modalidad:</strong> Trabajamos bajo pedido previa reserva.</p>
+                
+                <div class="redes-sociales">
+                    <h4>Redes Sociales Activas</h4>
+                    <a href="https://wa.me/584246370088" target="_blank" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="https://www.instagram.com/an_dreamss?stkn=aTV1N2w2ZnhreWFk" target="_blank" class="social-btn instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Andreams Pastelería. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <button onclick="abrirModal('modal-terminos')" class="link-modal">Términos y Condiciones</button>
+                <span>|</span>
+                <button onclick="abrirModal('modal-privacidad')" class="link-modal">Política de Privacidad</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL 1: TÉRMINOS Y CONDICIONES -->
+    <div id="modal-terminos" class="modal">
+        <div class="modal-body">
+            <span class="close-btn" onclick="cerrarModal('modal-terminos')">&times;</span>
+            <h2>TÉRMINOS Y CONDICIONES DE USO Y VENTA</h2>
+            <div class="modal-text">
+                <p>Bienvenido al sitio web de Pastelería Andreams. Al acceder y utilizar nuestra página, usted acepta cumplir con los siguientes términos y condiciones:</p>
+                <h3>1. Proceso de Pedidos y Reservas</h3>
+                <p>Todos los pedidos de pastelería personalizada o de catálogo deben realizarse con un mínimo de 2 días de anticipación. Las reservas de pedidos especiales se confirmarán únicamente una vez recibido el pago del anticipo correspondiente del total bruto del producto.</p>
+                <h3>2. Políticas de Pago</h3>
+                <p>Aceptamos como métodos de pago: Transferencia, Pago Móvil, Efectivo. El saldo restante de los pedidos apartados con anticipo deberá liquidarse 24 horas antes de la entrega.</p>
+                <h3>3. Cancelaciones, Modificaciones y Cambios</h3>
+                <ul>
+                    <li>Las modificaciones de diseño, sabor o tamaño se aceptarán con un máximo de 48 horas antes de la fecha de entrega.</li>
+                    <li>En caso de cancelación por parte del cliente con menos de 48 horas de anticipación, el anticipo abonado no será reembolsado, debido a que los insumos y la preparación ya habrán sido puestos en marcha.</li>
+                </ul>
+                <h3>4. Entrega, Delivery y Responsabilidad</h3>
+                <p><strong>Retiro en tienda:</strong> Al retirar el producto en nuestro local, el cliente debe verificar que el diseño y estado sean los correctos. Una vez que el producto sale del establecimiento, Pastelería Andreams no se hace responsable por daños ocurridos durante el transporte por parte del cliente.</p>
+                <p><strong>Servicio de Delivery:</strong> Si el cliente contrata nuestro delivery oficial, nos hacemos responsables de que el producto llegue en óptimas condiciones. Si el cliente envía un servicio de mensajería externo ajeno a nuestra empresa, el transporte correrá bajo su total riesgo.</p>
+                <h3>5. Alérgenos e Ingredientes</h3>
+                <p>Nuestros productos se elaboran en instalaciones que procesan harinas de trigo con gluten, frutos secos, lácteos, huevos, etc. Es responsabilidad del cliente informar explícitamente en las notas del pedido si requiere un producto con restricciones estrictas de alérgenos.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: POLÍTICA DE PRIVACIDAD -->
+    <div id="modal-privacidad" class="modal">
+        <div class="modal-body">
+            <span class="close-btn" onclick="cerrarModal('modal-privacidad')">&times;</span>
+            <h2>POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS</h2>
+            <div class="modal-text">
+                <p>En Pastelería Andreams, valoramos su confianza. Esta política describe cómo recopilamos y tratamos sus datos personales a través de nuestro sitio web:</p>
+                <h3>1. Información que Recopilamos</h3>
+                <p>Para procesar sus compras y entregas, solicitamos los siguientes datos personales: Nombre completo, dirección de entrega, número telefónico.</p>
+                <h3>2. Finalidad del Tratamiento de Datos</h3>
+                <ul>
+                    <li>Procesar, preparar y facturar su pedido de pastelería.</li>
+                    <li>Gestionar la entrega a domicilio (delivery) en la dirección indicada.</li>
+                    <li>Comunicarnos con usted en caso de dudas sobre el diseño o disponibilidad de sabores.</li>
+                    <li>Enviarle boletines de promociones de temporada, únicamente si ha marcado la casilla de consentimiento para envíos publicitarios.</li>
+                </ul>
+                <h3>3. Seguridad y Pagos de Terceros</h3>
+                <p>Garantizamos que no vendemos ni compartimos sus datos personales con terceras empresas ajenas a la operación. Los pagos en línea son procesados mediante plataformas externas seguras; nuestro sitio web no almacena ni tiene acceso a números de tarjetas de crédito o datos bancarios.</p>
+                <h3>4. Derechos de Acceso y Modificación</h3>
+                <p>Usted tiene derecho a rectificar, actualizar o solicitar la eliminación de sus datos de nuestra base de datos en cualquier momento enviando un WhatsApp a: <strong>0424-6370088</strong>.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
